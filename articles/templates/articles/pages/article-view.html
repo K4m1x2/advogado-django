@@ -1,0 +1,15 @@
+{% load static %}
+{% include 'articles/partials/head.html' %}
+<body>
+    {% include 'articles/partials/header.html' %}
+    {% include 'articles/partials/whatsapp-icon.html' %}
+    <section class="blog-section blog-section-detail">
+        <div class="blog-content-detail">
+            {% include 'articles/partials/articles.html' %}
+        </div>
+    </section>
+    {% include 'articles/partials/contact.html' %}
+    {% include 'articles/partials/footer.html' %}
+    <script src="{% static 'articles/js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+{% load static %}
+{% include 'articles/partials/head.html' %}
+<body>
+    {% include 'articles/partials/header.html' %}
+    {% include 'articles/partials/whatsapp-icon.html' %}
+    <section class="about-section">
+        <div class="about-image">
+            <img src="{% static 'img/advogado-wilker.PNG' %}" alt="">
+            <h2>Wilker Fernandes</h2>
+        </div>
+        <div class="about-content">
+            <h2>Precisando de um <span>advogado?</span></h2>
+            <h3>Wilker Fernandes</h3>
+            <p>Se você precisa de um advogado experiente para lhe ajudar em assuntos jurídicos, você está no lugar certo!</p>
+            <div class="social-media">
+                <a href=""><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/adv.wilker/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                <a href=""><i class='bx bxl-whatsapp' ></i></a>
+            </div>
+            <a class="about-link" href="#">Fale Comigo Agora <i class='bx bxl-whatsapp' ></i></a>
+        </div>
+    </section>
+    <main class="main-content">
+        <section class="main-section">
+            <div class="main-title">
+                <h2>Alguns de nossos serviços</h2>
+            </div>
+            <div class="div-section">
+                <div class="main-div">
+                    <i class='bx bx-hard-hat' ></i>
+                    <h2>Trabalhista</h2>
+                    <div class="list-main">
+                        <ul>
+                            <li>Orientação sobre direitos trabalhistas</li>
+                            <li>Rescisão de contrato de trabalho:</li>
+                            <li>Ações trabalhistas</li>
+                            <li>Contratos de trabalho</li>
+                            <li>Questões de saúde e segurança no trabalho</li>
+                        </ul>
+                    </div>
+                    <a href="">Saiba Mais</a>
+                </div>
+                <div class="main-div">
+                    <i class='bx bx-male-female'></i>
+                    <h2>Família</h2>
+                    <div class="list-main">
+                        <ul>
+                            <li>Divórcio</li>
+                            <li>Guarda dos filhos</li>
+                            <li>Pensão alimentícia</li>
+                            <li>Proteção contra violência doméstica</li>
+                        </ul>
+                    </div>
+                    <a href="">Saiba Mais</a>
+                </div>
+                <div class="main-div">
+                    <i class='bx bx-building-house'></i>
+                    <h2>Imobiliario</h2>
+                    <div class="list-main">
+                        <ul>
+                            <li>Orientação na compra ou venda de imóveis</li>
+                            <li>Elaboração e análise de contratos de locação</li>
+                            <li>Resolução de conflitos</li>
+                            <li>Regularização de imóveis</li>
+                            <li>Assessoria em questões tributárias</li>
+                        </ul>
+                    </div>
+                    <a href="">Saiba Mais</a>
+                </div>
+            </div>
+            <div class="main-link">
+                <a href="">Ver todos os serviços</a>
+            </div>
+        </section>
+    </main>
+    <section class="blog-section">
+        <div class="main-blog">
+            <h2>Nosso Blog</h2>
+        </div>
+        <div class="blog-content">
+            {% for article in articles %}
+                {% include 'articles/partials/articles.html' %}
+            {% endfor %}   
+        </div>
+        <div class="main-link">
+            <a href="{% url 'articles-list' %}">Carregar todos</a>
+        </div>
+    </section>
+    {% include 'articles/partials/contact.html' %}
+    {% include 'articles/partials/footer.html' %}
+    <script src="{% static 'articles/js/script.js' %}"></script>
+</body>
+</html>

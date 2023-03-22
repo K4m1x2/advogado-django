@@ -1,0 +1,35 @@
+<article class="main-article">
+    {% if is_detail_page is True %}
+        <div class="articles-detail-title">
+            <h1>{{article.title}}</h1>
+            <div class="articles-detail-author">
+                <div class="compact">
+                    <i class='bx bx-user-circle' ></i><h4>{{article.author.first_name}} {{article.author.last_name}}</h4>
+                </div>
+                <div class="compact">
+                    <i class='bx bxs-calendar-alt' ></i><h4>{{article.created_at|date:"d/m/Y"}}</h4>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="articles-image">
+        <img src="{{article.cover.url}}" alt="">
+    </div>
+    <div class="articles-info">
+        <div class="articles-category">
+            <h2>{{ article.category }}</h2>
+        </div>
+        <div class="articles-title">
+            <h1>{{ article.title }}</h1>
+        </div>
+        {% if is_detail_page is True %}
+            <div class="articles-text">
+                <p>{{article.text}}</p>
+            </div>
+        {% endif %}
+    </div>
+    {% if is_detail_page is not True %}
+        <div class="articles-button">{% if article.id is not None %}<a href="{% url 'articles-article' slug=article.slug %}">Leia Mais</a>{% endif %}</div>
+    {% endif %}
+</article>
+        
