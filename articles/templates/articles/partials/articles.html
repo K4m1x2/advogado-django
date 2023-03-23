@@ -26,7 +26,7 @@
         </div>
         {% if is_detail_page is True %}
             <div class="articles-text">
-                <p>{{article.text}}</p>
+                <p>{{article.text|safe}}</p>
             </div>
         {% endif %}
     </div>

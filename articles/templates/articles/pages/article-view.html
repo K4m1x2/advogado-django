@@ -3,9 +3,16 @@
 <body>
     {% include 'articles/partials/header.html' %}
     {% include 'articles/partials/whatsapp-icon.html' %}
-    <section class="blog-section blog-section-detail">
+    {% include 'articles/partials/social-share.html' %}
+    <section class="blog-section-detail">
         <div class="blog-content-detail">
             {% include 'articles/partials/articles.html' %}
+        </div>
+        <div class="doubt-section">
+            <div class="div-doubt">
+                <h2>Ficou com alguma dúvida?</h2>
+                <img src="{% static 'img/whatsapp.png' %}" alt="">
+            </div>
         </div>
     </section>
     {% include 'articles/partials/contact.html' %}
