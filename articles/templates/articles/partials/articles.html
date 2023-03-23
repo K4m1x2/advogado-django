@@ -1,13 +1,15 @@
 <article class="main-article">
     {% if is_detail_page is True %}
         <div class="articles-detail-title">
-            <h1>{{article.title}}</h1>
-            <div class="articles-detail-author">
-                <div class="compact">
-                    <i class='bx bx-user-circle' ></i><h4>{{article.author.first_name}} {{article.author.last_name}}</h4>
-                </div>
-                <div class="compact">
-                    <i class='bx bxs-calendar-alt' ></i><h4>{{article.created_at|date:"d/m/Y"}}</h4>
+            <div class="div-title">
+                <h1>{{article.title}}</h1>
+                <div class="articles-detail-author">
+                    <div class="compact">
+                        <i class='bx bx-user-circle' ></i><h4>{{article.author.first_name}} {{article.author.last_name}}</h4>
+                    </div>
+                    <div class="compact">
+                        <i class='bx bxs-calendar-alt' ></i><h4>{{article.created_at|date:"d/m/Y"}}</h4>
+                    </div>
                 </div>
             </div>
         </div>

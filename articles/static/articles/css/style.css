@@ -551,8 +551,10 @@ table {
 
 .articles-detail-title {
     width: 100%;
-    padding: 3rem;
+    padding: 3rem 0 3rem 0;
     background: #F2F2F2;
+    display: flex;
+    justify-content: center;
     box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.2), inset 0 5px 5px -5px rgba(0, 0, 0, 0.2);
     
 }
@@ -561,15 +563,12 @@ table {
     color: #320035;
     font-weight: 500;
     font-family: system-ui, -apple-system, sans-serif;
-    text-align: center;
     font-size: 4rem;
-    width: 80%;
 }
 
 .articles-detail-title .articles-detail-author {
     display: flex;
     justify-content: center;
-    width: 63%;
     margin-top: 2rem;
 }
 
@@ -578,6 +577,13 @@ table {
     font-size: 1.6rem;
     font-family: sans-serif;
     color: #7A7A7A;
+}
+
+.articles-detail-title .div-title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 70%;
 }
 
 .articles-button {
@@ -691,7 +697,7 @@ table {
 @media  screen and (max-width: 700px) {
     .about-section {
         flex-direction: column;
-        
+
     }
 
     .about-content {
