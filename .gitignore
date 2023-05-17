@@ -1,3 +1,6 @@
 venv
 .env
 media
+gunicorn-error-log
+static/
+db.sqlite
